@@ -8,8 +8,8 @@ module.exports.run = async (bot, message, args) => {
   let wtbEmbed = new Discord.RichEmbed()
   .setDescription("[WTB]")
   .setColor("#930000")
-  .addField("User", `${message.author}`)
-  .addField("INFO", info)
+  .addField("User", `[${message.author}]` true)
+  .addField("INFO", info true)
   .setFooter("Made by Jimmy ✦ Cracking Hacking");
 
   let wtbchannel = message.guild.channels.find(`name`, "wtb")
