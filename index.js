@@ -41,13 +41,18 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
-  if(cmd === `-clear`) {
-      let clearFile = bot.commands.get("clear");
-           clearFile.run(bot,message,args);
-}
-// AND CONTINUE  LIKE, WITH THAT BEING DONE YOU
-// CAN GUARANTEE THAT THEY USE YOUR PREFIX.
+let clearCmd = prefix + "clear";
+let banCmd = prefix + "ban";
+let reportCmd = prefix + "report";
+let serverinfoCmd = prefix + "serverinfo";
+let botinfoCmd= prefix + "botinfo";
+let kickCmd= prefix + "kick";
+let tempmuteCmd = prefix + "tempmute";
 
+  if(cmd === clearCmd | cmd === reportCmd | cmd === serverinfoCmd | cmd === botinfoCmd | cmd === kickCmd | cmd === tempmuteCmd | cmd === banCmd)  {
+      let cmdFile = bot.commands.get(cmd.slice(prefix.length));
+      cmdFile .run(bot,message,args);
+}
 });
 
 bot.login(process.env.BOT_TOKEN);
