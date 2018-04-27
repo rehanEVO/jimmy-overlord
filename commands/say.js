@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   .setDescription("[WTB]")
   .setColor("#930000")
   .addField("User", `[${message.author}]`)
-  .addField("INFO", info true)
+  .addField("INFO", info)
   .setFooter("Made by Jimmy ✦ Cracking Hacking");
 
   let wtbchannel = message.guild.channels.find(`name`, "wtb")
@@ -20,5 +20,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "say"
+  name: "wtb"
 }
