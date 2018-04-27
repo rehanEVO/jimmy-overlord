@@ -1,33 +1,29 @@
+module.exports.help = {
+  name: "clear"
+}
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+  // Command is !clear <Number that's less than 100 and greater than 0.
 
-
-
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MESSAGES");
-  if(!args[0]) return message.channel.send
-  ({embed: {
-    color: 0xe20a0f,
-    description: '**Invalid arguments use:** \n **EXAMPLE**: _-clear 2_'
-  }});
-  message.channel.bulkDelete(args[0]).then(() => {
-
-    let clearEmbed = new Discord.RichEmbed()
-      .setDescription("ClearChat | successfully")
-      .setColor("#930000")
-      .addField("Chat has cleared", `**successfully**`)
-      .addField("Cleared", ` ${args[0]}` + "messages.")
-      .setFooter("Made by Jimmy ✦ Cracking Hacking");
-
-      let reportschannel = message.guild.channels.find(`name`, "logs")
-      if(!reportschannel) return message.channel.send("Couldn't find logs channel");
-
-      message.delete().catch(O_o=>{});
-      reportschannel.send(clearEmbed);
-  });
-
+  if(message.member.hasPermission("MANAGE_MESSAGES")) {
+    if(args[0]) {
+      message.channel.bulkDelete(args[0]).then(msg => msg.delete(5000));
+    } else {
+      let embed = new Discord.RichEmbed()
+      .setAuthor(`» Wrong Format`)
+      .setColor("#d62035")
+      .addField("**EXAMPLE:** -clear 2",  `[${message.member}]`);
+      message.channel.send(embed);
+    }
+  } else {
+    let embed = new Discord.RichEmbed()
+    .setAuthor(`» Insufficient permissions`)
+    .setColor("#d62035")
+    .addField("Please ask staff for the permissions.",  `[${message.member}]`);
+    message.channel.send(embed);
+  }
 }
-
 
 module.exports.help = {
   name: "clear"
