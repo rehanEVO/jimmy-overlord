@@ -1,6 +1,3 @@
-module.exports.help = {
-  name: "clear"
-}
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
@@ -11,16 +8,16 @@ module.exports.run = async (bot, message, args) => {
       message.channel.bulkDelete(args[0]).then(msg => msg.delete(5000));
     } else {
       let embed = new Discord.RichEmbed()
-      .setAuthor(`» Wrong Format`)
+      .setAuthor(`» Error`)
       .setColor("#d62035")
-      .addField("**EXAMPLE:** -clear 2",  `[${message.member}]`);
+      .addField("Insufficient arguments.",  `[${message.member}]`);
       message.channel.send(embed);
     }
   } else {
     let embed = new Discord.RichEmbed()
-    .setAuthor(`» Insufficient permissions`)
+    .setAuthor(`» Error`)
     .setColor("#d62035")
-    .addField("Please ask staff for the permissions.",  `[${message.member}]`);
+    .addField("Insufficient permissions.",  `[${message.member}]`);
     message.channel.send(embed);
   }
 }
