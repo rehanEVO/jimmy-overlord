@@ -13,7 +13,6 @@ module.exports.run = async (bot, message, args) => {
   message.channel.bulkDelete(args[0]).then(() => {
 
     let clearEmbed = new Discord.RichEmbed()
-      .
       .setDescription("ClearChat | successfully")
       .setColor("#930000")
       .addField("Chat has cleared", `**successfully**`)
