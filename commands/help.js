@@ -5,8 +5,9 @@ module.exports.run = async (bot, message, args) => {
   let helpembed = new Discord.RichEmbed()
   .setDescription("**Help Commands**")
   .setColor("#930000")
-  .addField("tier1", "tier2", true)
-  .addField("hier1", "hier2", true)
+  .addField("Command", "tier2", true)
+  .addField("Member", ":white_check_mark:", true)
+  .addField("Staff", ":white_check_mark:", true)
   .addField("test description", "testdedaida")
   .addField("Test decriptiaonda2", "tedsk")
   .setFooter("Made by Jimmy ✦ Cracking Hacking");
