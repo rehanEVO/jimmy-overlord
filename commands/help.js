@@ -6,8 +6,8 @@ module.exports.run = async (bot, message, args) => {
   .setDescription("**Help Commands**")
   .setColor("#930000")
   .addField("Command", "tier2", true)
-  .addField("Member", ":white_check_mark:", true)
-  .addField("Staff", ":white_check_mark:", true)
+  .addField("Member | Staff", ":white_check_mark: | :white_check_mark:", true)
+  .addField("Description", "Wanting to buy something use -wtb _WHAT YOU WANT TO BUY_", true)
   .addField("test description", "testdedaida")
   .addField("Test decriptiaonda2", "tedsk")
   .setFooter("Made by Jimmy ✦ Cracking Hacking");
