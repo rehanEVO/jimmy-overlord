@@ -41,8 +41,12 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
-  let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
+  if(cmd === `-clear`) {
+      let clearFile = bot.commands.get("clear");
+           clearFile.run(bot,message,args);
+}
+// AND CONTINUE  LIKE, WITH THAT BEING DONE YOU
+// CAN GUARANTEE THAT THEY USE YOUR PREFIX.
 
 });
 
