@@ -48,9 +48,9 @@ let serverinfoCmd = prefix + "serverinfo";
 let botinfoCmd= prefix + "botinfo";
 let kickCmd= prefix + "kick";
 let tempmuteCmd = prefix + "tempmute";
-let sayCmd = prefix + "say";
+let wtbCmd = prefix + "say";
 
-  if(cmd === clearCmd | cmd === reportCmd | cmd === serverinfoCmd | cmd === botinfoCmd | cmd === kickCmd | cmd === tempmuteCmd | cmd === banCmd | cmd === sayCmd)  {
+  if(cmd === clearCmd | cmd === reportCmd | cmd === serverinfoCmd | cmd === botinfoCmd | cmd === kickCmd | cmd === tempmuteCmd | cmd === banCmd | cmd === wtbCmd)  {
       let cmdFile = bot.commands.get(cmd.slice(prefix.length));
       cmdFile .run(bot,message,args);
 }
