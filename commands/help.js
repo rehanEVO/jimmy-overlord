@@ -6,8 +6,8 @@ module.exports.run = async (bot, message, args) => {
   .setDescription("**Help Commands**")
   .setColor("#930000")
   .setThumbnail(sicon)
-  .addField("COMMAND", "MEMBERS", "STAFF", "Description", true)
-  .addField("wtb", "✅", "✅", "Wanting to buy something use -wtb _info here_", true)
+  .addField("COMMAND", "MEMBERS", "STAFF", "Description" true)
+  .addField("wtb", "✅", "✅", "Wanting to buy something use -wtb _info here_" true)
   .setFooter("Made by Jimmy ✦ Cracking Hacking");
 
 
