@@ -3,11 +3,16 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
   message.delete();
-  message.reply('Request added at #wtb')
+  
+   let replyEmbed = new Discord.RichEmbed()
+  .setDescription(":white_check_mark:  Successfully added request at #wtb ")
+  .setColor("#930000")
+  .addField("User", `[${message.author}]`)
+  .setFooter("Made by Jimmy ✦ Cracking Hacking");
+  message.reply('replyEmbed')
   .then(msg => {
     msg.delete(10000)
   })
-  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
   let info = args.join(" ");
   
   let wtbEmbed = new Discord.RichEmbed()
