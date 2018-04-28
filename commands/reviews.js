@@ -1,3 +1,4 @@
+const db = require('quick.db')
 
 exports.run = (bot, message, args, func) => {
 
