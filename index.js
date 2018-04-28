@@ -25,18 +25,10 @@ fs.readdir("./commands/", (err, files) =>{
 
 
 bot.on("ready", async () => {
-  var activityID = 0;
   console.log(`${bot.user.username} has successfully started`);
-  function(setActivity) {
-    if(activityID === 0) {
-      bot.user.setActivity("your behaviour", {type: "WATCHING"});
-} else if(activityID === 1) {
-    bot.uset.setActivity("Security Check!");
-         activityID = 0;
-};
-};
+  bot.user.setActivity("Your behaviour", {type: "WATCHING"});
 
- setInterval(setActivity, 30000);
+  //bot.user.setGame("Security Check!");
 
 });
 
@@ -56,10 +48,9 @@ let serverinfoCmd = prefix + "serverinfo";
 let botinfoCmd= prefix + "botinfo";
 let kickCmd= prefix + "kick";
 let tempmuteCmd = prefix + "tempmute";
-let wtbCmd = prefix + "wtb";
-let helpCmd = prefix + "help";
+let sayCmd = prefix + "say";
 
-  if(cmd === clearCmd | cmd === reportCmd | cmd === serverinfoCmd | cmd === botinfoCmd | cmd === kickCmd | cmd === tempmuteCmd | cmd === banCmd | cmd === wtbCmd | cmd === helpCmd)  {
+  if(cmd === clearCmd | cmd === reportCmd | cmd === serverinfoCmd | cmd === botinfoCmd | cmd === kickCmd | cmd === tempmuteCmd | cmd === banCmd | cmd === sayCmd)  {
       let cmdFile = bot.commands.get(cmd.slice(prefix.length));
       cmdFile .run(bot,message,args);
 }
