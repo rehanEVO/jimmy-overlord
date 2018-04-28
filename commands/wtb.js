@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
   let wtbchannel = message.guild.channels.find(`name`, "wtb") 
   if(!wtbchannel) return message.channel.send({embed: {
   description: ":x: Couldn't find a wtb channel",
-  color: 930000
+  color: 930011
 }}).then(msg => {
    msg.delete(10000)
   }) 
