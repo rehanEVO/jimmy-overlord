@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   .setColor("#930000")
   .addField("User", `[${message.author}]`)
   .setFooter("Made by Jimmy ✦ Cracking Hacking");
-  message.reply(replyEmbed)
+  message.channel.send(replyEmbed);
   .then(msg => {
     msg.delete(10000)
   })
