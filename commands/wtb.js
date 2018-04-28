@@ -3,6 +3,11 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 
   message.delete();
+  message.reply('Request added at #wtb')
+  .then(msg => {
+    msg.delete(10000)
+  })
+  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
   let info = args.join(" ");
   
   let wtbEmbed = new Discord.RichEmbed()
