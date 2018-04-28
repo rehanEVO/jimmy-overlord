@@ -12,7 +12,8 @@ module.exports.run = async (bot, message, args) => {
   .addField("INFO", info)
   .setFooter("Made by Jimmy ✦ Cracking Hacking");
 
-  let wtbchannel = message.guild.channels.find(`name`, "wtb") return  
+  let wtbchannel = message.guild.channels.find(`name`, "wtb") 
+  if(wtbchannel) return
   message.channel.send({embed: {
   description: ":white_check_mark: Request has been added to #wtb",
   color: 1930000
