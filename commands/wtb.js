@@ -13,17 +13,16 @@ module.exports.run = async (bot, message, args) => {
   .setFooter("Made by Jimmy ✦ Cracking Hacking");
 
   let wtbchannel = message.guild.channels.find(`name`, "wtb") 
-  if(wtbchannel) return
+  if(!wtbchannel) return message.channel.send("Couldn't find wtb channel");
+
+  message.delete().catch(O_o=>{});
+  wtbchannel.send(wtbEmbed);
   message.channel.send({embed: {
   description: ":white_check_mark: Request has been added to #wtb",
   color: 1930000
 }}).then(msg => {
    msg.delete(10000)
   }) 
-  if(!wtbchannel) return message.channel.send("Couldn't find wtb channel");
-
-  message.delete().catch(O_o=>{});
-  wtbchannel.send(wtbEmbed);
 }
 
 module.exports.help = {
