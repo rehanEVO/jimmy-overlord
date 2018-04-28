@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
   wtbchannel.send(wtbEmbed);
   message.channel.send({embed: {
   description: ":white_check_mark: Request has been added to #wtb",
-  color: 1930000
+  color: 9930000
 }}).then(msg => {
    msg.delete(10000)
   }) 
