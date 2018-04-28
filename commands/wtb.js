@@ -13,14 +13,12 @@ module.exports.run = async (bot, message, args) => {
   .setFooter("Made by Jimmy ✦ Cracking Hacking");
 
   let wtbchannel = message.guild.channels.find(`name`, "wtb") 
-  if(!wtbchannel) return   message.channel.send
-  ({embed: {
-  description: ":x: No `wtb` channel found",
-  color: 930000
+  if(!wtbchannel) return message.channel.send({embed: {
+  description: ":white_check_mark: Request has been canceled to #wtb",
+  color: 1930000
 }}).then(msg => {
    msg.delete(10000)
   }) 
-}
 
   wtbchannel.send(wtbEmbed);
   message.channel.send({embed: {
