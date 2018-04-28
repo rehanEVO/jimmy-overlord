@@ -4,17 +4,11 @@ module.exports.run = async (bot, message, args) => {
 
   message.delete();
   
-   let replyEmbed = new Discord.RichEmbed()
-  .setDescription(":white_check_mark:  Successfully added request at #wtb ")
-  .setColor("#930000")
-  .addField("User", `[${message.author}]`)
-  .setFooter("Made by Jimmy ✦ Cracking Hacking");
 message.reply({embed: {
-  color: 3447003,
-  description: ":white_check_mark: Request has been added at #wtb"
-}})
-  .then(msg => {
-    msg.delete(10000)
+  description: ":white_check_mark: Request has been added at #wtb",
+  color: 1930000
+}}).then(msg => {
+   msg.delete(10000)
   })
   let info = args.join(" ");
   
