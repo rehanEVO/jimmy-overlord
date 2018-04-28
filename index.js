@@ -36,10 +36,7 @@ bot.on("ready", async () => {
 };
 };
 
- setActivity();
  setInterval(setActivity, 30000);
-
-});
 
 });
 
