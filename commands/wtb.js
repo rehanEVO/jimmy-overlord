@@ -19,6 +19,7 @@ module.exports.run = async (bot, message, args) => {
 }}).then(msg => {
    msg.delete(10000)
   })
+  break;
   if(!wtbchannel) return message.channel.send("Couldn't find wtb channel");
 
   message.delete().catch(O_o=>{});
