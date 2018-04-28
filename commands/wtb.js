@@ -7,14 +7,14 @@ module.exports.run = async (bot, message, args) => {
   
   let wtbEmbed = new Discord.RichEmbed()
   .setDescription("「WTB」")
-  .setColor("#0xb355ca")
-  .addField("⊳ User", `☰ ${message.author} ☰`)
+  .setColor("#0x00aaaa")
+  .addField("⊳ User", `${message.author}`)
   .addField("⊳ Product Info", info)
   .setFooter("Made by Jimmy ✦ Cracking Hacking");
 
   let wtbchannel = message.guild.channels.find(`name`, "wtb") 
   if(!wtbchannel) return message.channel.send({embed: {
-  description: ":x: Couldn't find a wtb channel",
+  description: ":x:  Couldn't find a wtb channel",
   color: 0x76070b
 }}).then(msg => {
    msg.delete(10000)
@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 
   wtbchannel.send(wtbEmbed);
   message.channel.send({embed: {
-  description: ":white_check_mark: Request has been added to #wtb",
+  description: ":white_check_mark:  Your request has been added to #wtb",
   color: 0x32e01f
 }}).then(msg => {
    msg.delete(10000)
