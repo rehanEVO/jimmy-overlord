@@ -46,3 +46,7 @@ exports.run = (bot, message, args, func) => {
 
 
 }
+
+module.exports.help = {
+  name: "review"
+}
