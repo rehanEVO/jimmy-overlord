@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 
   let wtbchannel = message.guild.channels.find(`name`, "wtb") 
   if(!wtbchannel) return message.channel.send({embed: {
-  description: ":x:  Couldn't find a wtb channel.",
+  description: ":x:  Couldn't find a _wtb_ channel.",
   color: 0x76070b
 }}).then(msg => {
    msg.delete(10000)
@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 
   wtbchannel.send(wtbEmbed);
   message.channel.send({embed: {
-  description: ":white_check_mark:  Your request has been added to #wtb.",
+  description: ":white_check_mark:  Your request has been added to **${guild.channels.get("id", "437367683739156481")}**.",
   color: 0x32e01f
 }}).then(msg => {
    msg.delete(10000)
