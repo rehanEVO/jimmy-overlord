@@ -26,7 +26,7 @@ fs.readdir("./commands/", (err, files) =>{
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} has successfully started`);
-  bot.user.setActivity("Your behaviour", {type: "WATCHING"});
+  bot.user.setActivity("your behaviour", {type: "WATCHING"});
 
   //bot.user.setGame("Security Check!");
 
