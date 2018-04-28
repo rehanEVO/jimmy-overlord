@@ -6,10 +6,10 @@ module.exports.run = async (bot, message, args) => {
   let info = args.join(" ");
   
   let wtbEmbed = new Discord.RichEmbed()
-  .setDescription("[WTB]")
-  .setColor("#930000")
-  .addField("User", `[${message.author}]`)
-  .addField("INFO", info)
+  .setDescription("「WTB」")
+  .setColor("#0xb355ca")
+  .addField("⊳ User", `☰ ${message.author} ☰`)
+  .addField("⊳ Product Info", info)
   .setFooter("Made by Jimmy ✦ Cracking Hacking");
 
   let wtbchannel = message.guild.channels.find(`name`, "wtb") 
