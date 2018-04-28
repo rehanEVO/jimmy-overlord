@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 
   wtbchannel.send(wtbEmbed);
   message.channel.send({embed: {
-  description: ":white_check_mark:  Your request has been added to **${guild.channels.get("id", "437367683739156481")}**.",
+  description: ":white_check_mark:  Your request has been added to **${guild.channels.find("437367683739156481")}**.",
   color: 0x32e01f
 }}).then(msg => {
    msg.delete(10000)
