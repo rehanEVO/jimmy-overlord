@@ -25,10 +25,21 @@ fs.readdir("./commands/", (err, files) =>{
 
 
 bot.on("ready", async () => {
+  var activityID = 0;
   console.log(`${bot.user.username} has successfully started`);
-  bot.user.setActivity("your behaviour", {type: "WATCHING"});
+  function(setActivity) {
+    if(activityID === 0) {
+      bot.user.setActivity("your behaviour", {type: "WATCHING"});
+} else if(activityID === 1) {
+    bot.uset.setActivity("Security Check!");
+         activityID = 0;
+};
+};
 
-  //bot.user.setGame("Security Check!");
+ setActivity();
+ setInterval(setActivity, 30000);
+
+});
 
 });
 
