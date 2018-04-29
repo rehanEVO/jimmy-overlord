@@ -11,7 +11,10 @@ module.exports.run = async (bot, message, args) => {
     .then(msg => {
     msg.delete(10000)
   })
-  let reason = args.join(" ").slice(22);
+  let reason = args.join(" ").slice(22)
+  .then(msg => {
+    msg.delete(10000)
+  })
 
   if(!vouches[vUser.id]) vouches[vUser.id] = {
     vouches: 0
