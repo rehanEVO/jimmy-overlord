@@ -5,13 +5,13 @@ let vouches = JSON.parse(fs.readFileSync("./vouches.json", "utf8"));
 
 module.exports.run = async (bot, message, args) => {
 
-  //!warn @daeshan <reason>
+  //-vouch @user <vouch message>
   let vUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
   if(!vUser) return message.reply("Couldn't find them yo");
   let reason = args.join(" ").slice(22);
 
   if(!vouches[vUser.id]) vouches[vUser.id] = {
-    warns: 0
+    vouches: 0
   };
 
   vouches[vUser.id].vouches++;
