@@ -50,10 +50,10 @@ let botinfoCmd= prefix + "botinfo";
 let kickCmd= prefix + "kick";
 let tempmuteCmd = prefix + "tempmute";
 let wtbCmd = prefix + "wtb";
-let reviewCmd = prefix + "review";
-let reviewsCmd = prefix + "reviews";
+let warnCmd= prefix + "warn";
+let warnlevelCmd = prefix + "warnlevel";  
 
-  if(cmd === clearCmd | cmd === reportCmd | cmd === serverinfoCmd | cmd === botinfoCmd | cmd === kickCmd | cmd === tempmuteCmd | cmd === banCmd | cmd === wtbCmd | cmd === reviewCmd | cmd === reviewsCmd)  {
+  if(cmd === clearCmd | cmd === reportCmd | cmd === serverinfoCmd | cmd === botinfoCmd | cmd === kickCmd | cmd === tempmuteCmd | cmd === banCmd | cmd === wtbCmd | cmd === warnCmd | cmd === warnlevelCmd)  {
       let cmdFile = bot.commands.get(cmd.slice(prefix.length));
       cmdFile.run(bot,message,args);
 }
