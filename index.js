@@ -51,9 +51,11 @@ let kickCmd= prefix + "kick";
 let tempmuteCmd = prefix + "tempmute";
 let wtbCmd = prefix + "wtb";
 let warnCmd= prefix + "warn";
-let warnlevelCmd = prefix + "warnlevel";  
+let warnlevelCmd = prefix + "warnlevel";
+let vouchCmd = prefix + "vouch"; 
+let vouchesCmd = prefix + "vouches";  
 
-  if(cmd === clearCmd | cmd === reportCmd | cmd === serverinfoCmd | cmd === botinfoCmd | cmd === kickCmd | cmd === tempmuteCmd | cmd === banCmd | cmd === wtbCmd | cmd === warnCmd | cmd === warnlevelCmd)  {
+  if(cmd === clearCmd | cmd === reportCmd | cmd === serverinfoCmd | cmd === botinfoCmd | cmd === kickCmd | cmd === tempmuteCmd | cmd === banCmd | cmd === wtbCmd | cmd === warnCmd | cmd === warnlevelCmd | cmd === vouchCmd | cmd === vouchesCmd)  {
       let cmdFile = bot.commands.get(cmd.slice(prefix.length));
       cmdFile.run(bot,message,args);
 }
