@@ -22,6 +22,7 @@ module.exports.run = async (bot, message, args) => {
   fs.writeFile("./vouches.json", JSON.stringify(vouches), (err) => {
     if (err) console.log(err)
   });
+  message.delete();
 
   let vouchEmbed = new Discord.RichEmbed()
   .setDescription("Vouch")
