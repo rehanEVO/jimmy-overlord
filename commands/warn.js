@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Reason", reason);
 
   let warnchannel = message.guild.channels.find(`name`, "punishments");
-  if(!warnchannel) return message.reply("Couldn't find channel");
+  if(!warnchannel) return message.reply("Couldn't find the channel");
 
   warnchannel.send(warnEmbed);
 
