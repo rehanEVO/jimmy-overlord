@@ -6,10 +6,10 @@ let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 module.exports.run = async (bot, message, args) => {
 
   //!warn @daeshan <reason>
-  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("No permissions");
+  if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("No can do pal!");
   let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
-  if(!wUser) return message.reply("Couldn't find the user.");
-  if(wUser.hasPermission("MANAGE_MESSAGES")) return message.reply("dats fucking retarded");
+  if(!wUser) return message.reply("Couldn't find them yo");
+  if(wUser.hasPermission("MANAGE_MESSAGES")) return message.reply("They waaaay too kewl");
   let reason = args.join(" ").slice(22);
 
   if(!warns[wUser.id]) warns[wUser.id] = {
@@ -31,8 +31,8 @@ module.exports.run = async (bot, message, args) => {
   .addField("Number of Warnings", warns[wUser.id].warns)
   .addField("Reason", reason);
 
-  let warnchannel = message.guild.channels.find(`name`, "punishments");
-  if(!warnchannel) return message.reply("Couldn't find the channel");
+  let warnchannel = message.guild.channels.find(`name`, "incidents");
+  if(!warnchannel) return message.reply("Couldn't find channel");
 
   warnchannel.send(warnEmbed);
 
