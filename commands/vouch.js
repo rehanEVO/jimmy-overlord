@@ -7,11 +7,11 @@ module.exports.run = async (bot, message, args) => {
 
   //-vouch @user <vouch message>
   let vUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
-  if(message.mentions.users.first === message.author) return message.reply("Can't vouch yourself.")
   if(!vUser) return  message.reply("Couldn't find them yo")
     .then(msg => {
     msg.delete(10000)
   })
+  if(message.mentions.users.first === message.author) return message.reply("Can't vouch yourself.")
   let reason = args.join(" ").slice(22);
 
   if(!vouches[vUser.id]) vouches[vUser.id] = {
