@@ -7,8 +7,7 @@ module.exports.run = async (bot, message, args) => {
 
   //-vouch @user <vouch message>
   let vUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
-  let Author = message.mentions.users.first
-  if(Author === message.author) return message.reply("nigger dont vouch yourself");
+  if(!message.mentions.users.first === message.author) return message.reply("Vouch Added");
   if(!vUser) return  message.reply("Couldn't find them yo")
     .then(msg => {
     msg.delete(10000)
