@@ -21,15 +21,6 @@ fs.readdir("./commands/", (err, files) =>{
     bot.commands.set(props.help.name, props);
 
   });
-  
-  bot.on("message", async message => {
-    let msg = message.content.toUpperCase();
-      if (msg.content.startsWith('DM')) {
-    setInterval(function() {
-        let user = msg.mentions.users.first() || msg.author;
-            user.send('raided by UhJimmy oof.')
-    }, 3000)
-}
     }
 
 });
