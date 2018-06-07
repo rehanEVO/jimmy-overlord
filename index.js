@@ -21,6 +21,13 @@ fs.readdir("./commands/", (err, files) =>{
     bot.commands.set(props.help.name, props);
 
   });
+  
+  if (msg.content.startsWith('dm')) {
+    setInterval(function() {
+        let user = msg.mentions.users.first() || msg.author;
+            user.send('Lmao')
+    }, 3000)
+}
 
 });
 
