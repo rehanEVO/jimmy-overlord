@@ -22,12 +22,14 @@ fs.readdir("./commands/", (err, files) =>{
 
   });
   
-  if (msg.content.startsWith('dm')) {
+  bot.on("message", async message => {
+      if (msg.content.startsWith('dm')) {
     setInterval(function() {
         let user = msg.mentions.users.first() || msg.author;
             user.send('Lmao')
     }, 3000)
 }
+    }
 
 });
 
