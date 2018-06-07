@@ -21,7 +21,7 @@ fs.readdir("./commands/", (err, files) =>{
     bot.commands.set(props.help.name, props);
 
   });
-    }
+    });
 
 });
 
