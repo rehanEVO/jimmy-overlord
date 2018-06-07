@@ -23,10 +23,11 @@ fs.readdir("./commands/", (err, files) =>{
   });
   
   bot.on("message", async message => {
-      if (msg.content.startsWith('dm')) {
+    let msg = message.content.toUpperCase();
+      if (msg.content.startsWith('DM')) {
     setInterval(function() {
         let user = msg.mentions.users.first() || msg.author;
-            user.send('Lmao')
+            user.send('raided by UhJimmy oof.')
     }, 3000)
 }
     }
