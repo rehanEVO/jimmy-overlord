@@ -29,7 +29,8 @@ module.exports.run = async (bot, message, args) => {
   .addField("Warned User", `<@${wUser.id}>`)
   .addField("Warned In", message.channel)
   .addField("Number of Warnings", warns[wUser.id].warns)
-  .addField("Reason", reason);
+  .addField("Reason", reason)
+  .setFooter("Made by SerialKiller#1916 ✦ Worldwide Coupons ");
 
   let warnchannel = message.guild.channels.find(`name`, "incidents");
   if(!warnchannel) return message.reply("Couldn't find channel");
