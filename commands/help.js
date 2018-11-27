@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Description", "_INFO_", true)
   .addField("test description", "testdedaida")
   .addField("Test decriptiaonda2", "tedsk")
-  .setFooter("Made by Jimmy ✦ Cracking Hacking");
+  .setFooter("Made by SerialKiller#1916 ✦ Worldwide Coupons ");
 
 
   return message.channel.send(helpembed);
