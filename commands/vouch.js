@@ -28,10 +28,13 @@ module.exports.run = async (bot, message, args) => {
   let vouchEmbed = new Discord.RichEmbed()
   .setDescription("Vouch")
   .setAuthor(message.author.username)
+  
   .setColor("#800080")
+  
   .addField("Vouched user", `<@${vUser.id}>`)
   .addField("Vouches", vouches[vUser.id].vouches)
-  .addField("Vouch Reason", reason);
+  .addField("Vouch Reason", reason)
+   .setFooter("Made by SerialKiller#1916 ✦ Worldwide Coupons ");
 
   let vouchchannel = message.guild.channels.find(`name`, "vouches");
   if(!vouchchannel) return message.reply("Couldn't find vouches channel");
