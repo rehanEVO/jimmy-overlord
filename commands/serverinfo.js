@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Created On", message.guild.createdAt)
   .addField("You Joined", message.member.joinedAt)
   .addField("Total Members", message.guild.memberCount)
-  .setFooter("Made by Jimmy ✦ Cracking Hacking");
+  .setFooter("Made by SerialKiller#1916 ✦ Worldwide Coupons ");
 
 
   return message.channel.send(serverembed);
