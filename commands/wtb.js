@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
   .setColor("#0x00aaaa")
   .addField("⊳ User", `${message.author}`)
   .addField("⊳ Product Info", info)
-  .setFooter("Made by Jimmy ✦ Cracking Hacking");
+  .setFooter("Made by SerialKiller#1916 ✦ Worldwide Coupons ");
 
   let wtbchannel = message.guild.channels.find(`name`, "wtb") 
   if(!wtbchannel) return message.channel.send({embed: {
