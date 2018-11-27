@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Banned In", message.channel)
   .addField("Time", message.createdAt)
   .addField("Reason", bReason)
-  .setFooter("Made by Jimmy ✦ Cracking Hacking");
+  .setFooter("Made by SerialKiller#1916 ✦ Worldwide Coupons ");
 
   let punishmentschannel = message.guild.channels.find(`name`, "punishments");
   if(!punishmentschannel) return message.channel.send("Can't find punishments channel.");
